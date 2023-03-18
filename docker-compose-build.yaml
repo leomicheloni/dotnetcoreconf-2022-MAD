@@ -1,0 +1,13 @@
+version: '3.5'
+services:
+  my.api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+  myother.api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+
+      

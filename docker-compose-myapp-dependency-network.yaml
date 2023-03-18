@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  myapp:
+    image: myrepo/myapp:version1
+    restart: always
+    ports:
+      - 8088:80
+    environment:
+      DB_HOST: db
+      DB_USER: exampleuser
+      DB_PASSWORD: examplepass
+      DB_NAME: exampledb
+    volumes:
+      - vol1:/var/www/html
+volumes:
+  vol1:
+networks:
+  default:
+    name: my-pre-existing-network
+    external: true
